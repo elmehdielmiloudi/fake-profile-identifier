@@ -27,6 +27,7 @@ submit_button.click()
 search=driver.find_element_by_xpath("//*[@id=\"ember36\"]/input")
 search.send_keys("Amitab Bachan","\n")
 #enter the entity name to search
+#Now it loads popular profile results all we need is to collect the profile links
 
 
 
