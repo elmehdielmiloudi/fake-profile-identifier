@@ -20,7 +20,13 @@ text_area = driver.find_element_by_id('password')
 text_area.send_keys("password")
 # click submit button
 submit_button = driver.find_elements_by_xpath('//*[@id="app__container"]/main/div/form/div[3]/button')[0]
+#login button
+submit_button.click()
+#clicks it
 #find search box
+search=driver.find_element_by_xpath("//*[@id=\"ember36\"]/input")
+search.send_keys("Amitab Bachan","\n")
+#enter the entity name to search
 
 
 
@@ -28,6 +34,4 @@ submit_button = driver.find_elements_by_xpath('//*[@id="app__container"]/main/di
 
 
 
-#finally closes it
 
-#this is most siple way to start and test the use of selenium
