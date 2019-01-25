@@ -28,6 +28,14 @@ search=driver.find_element_by_xpath("//*[@id=\"ember36\"]/input")
 search.send_keys("Amitab Bachan","\n")
 #enter the entity name to search
 #Now it loads popular profile results all we need is to collect the profile links
+str=[]
+#collects profile links
+for a in driver.find_elements_by_xpath('.//a'):
+    if a.get_attribute("data-control-name")==("search_srp_result"):
+        if a.get_attribute("class")==("search-result__result-link search-result__result-link--visited ember-view"):
+            str.append(a.get_attribute("href"))
+#these if statements are for getting exact links to the resultant profiles
+
 
 
 
