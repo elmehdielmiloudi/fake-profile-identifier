@@ -35,12 +35,15 @@ for a in driver.find_elements_by_xpath('.//a'):
         if a.get_attribute("class")==("search-result__result-link search-result__result-link--visited ember-view"):
             str.append(a.get_attribute("href"))
 #these if statements are for getting exact links to the resultant profiles
+print("Links are:")
+x=len(str)
+m=0
+for m in range(len(str)):
+    print(str[m])
 
 
-
-
-
-
+time.sleep(10)
+driver.quit()
 
 
 
