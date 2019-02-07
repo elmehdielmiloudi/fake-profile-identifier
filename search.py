@@ -16,7 +16,7 @@ text_area = driver.find_element_by_id('username')
 #sendig the text to be filled
 text_area.send_keys("user@gmail.com")
 text_area = driver.find_element_by_id('password')
-text_area.send_keys("password")
+text_area.send_keys("pswd")
 # click submit button
 submit_button = driver.find_elements_by_xpath('//*[@id="app__container"]/main/div/form/div[3]/button')[0]
 submit_button.click()
@@ -24,8 +24,9 @@ s=[]
 s=["Amitab Bachan","Samantha","Mark Zuckerberg"]
 print(s[0])
 l=(len(s))
-z=0
+
 def search(m):
+    driver.get("https://www.linkedin.com/feed/")
     search=driver.find_element_by_xpath("//*[@id=\"ember35\"]/input")
     search.send_keys(m,"\n")
     time.sleep(5)
@@ -42,8 +43,9 @@ def search(m):
         if n in res[i]:
             print(res[i])
 
-search(s[0])
-
+for i in range(len(s)):
+    z=s[i]
+    search(z)
 #finally closes it
 
 #this is most siple way to start and test the use of selenium
