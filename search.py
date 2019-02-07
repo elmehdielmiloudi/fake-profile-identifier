@@ -22,21 +22,25 @@ text_area.send_keys("theunmounted")
 # click submit button
 submit_button = driver.find_elements_by_xpath('//*[@id="app__container"]/main/div/form/div[3]/button')[0]
 submit_button.click()
-m="amitab/-bachan"
-search=driver.find_element_by_xpath("//*[@id=\"ember35\"]/input")
-search.send_keys("Amitab Bachan","\n")
-time.sleep(5)
+s="Amitab Bachan"
+def search(m):
+    search=driver.find_element_by_xpath("//*[@id=\"ember35\"]/input")
+    search.send_keys(s,"\n")
+    time.sleep(5)
+    print("Seraching",m)
+    res=[]
+    for a in driver.find_elements_by_xpath('.//a'):
+        res.append(a.get_attribute("href"))
+    n=""
+    n=m.lower()
+    n=n.replace(" ","-")
+    print(n)
+    #these if statements are for getting exact links to the resultant profiles
+    for i in range (len(res)):
 
-print("Seraching",m)
-res=[]
-for a in driver.find_elements_by_xpath('.//a'):
-    res.append(a.get_attribute("href"))
-m="amitab-bachan"
-#these if statements are for getting exact links to the resultant profiles
-for i in range (len(res)):
-    if m in res[i]:
-        print(res[i])
-
+        if n in res[i]:
+            print(res[i])
+search(s)
 
 
 
