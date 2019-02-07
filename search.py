@@ -14,18 +14,20 @@ driver.get('https://www.linkedin.com/uas/login')
 text_area = driver.find_element_by_id('username')
 #finding where to fill the text
 #sendig the text to be filled
-text_area.send_keys("theunmountedprogrammer@gmail.com")
-
+text_area.send_keys("user@gmail.com")
 text_area = driver.find_element_by_id('password')
-
-text_area.send_keys("theunmounted")
+text_area.send_keys("password")
 # click submit button
 submit_button = driver.find_elements_by_xpath('//*[@id="app__container"]/main/div/form/div[3]/button')[0]
 submit_button.click()
-s="Amitab Bachan"
+s=[]
+s=["Amitab Bachan","Samantha","Mark Zuckerberg"]
+print(s[0])
+l=(len(s))
+z=0
 def search(m):
     search=driver.find_element_by_xpath("//*[@id=\"ember35\"]/input")
-    search.send_keys(s,"\n")
+    search.send_keys(m,"\n")
     time.sleep(5)
     print("Seraching",m)
     res=[]
@@ -37,12 +39,10 @@ def search(m):
     print(n)
     #these if statements are for getting exact links to the resultant profiles
     for i in range (len(res)):
-
         if n in res[i]:
             print(res[i])
-search(s)
 
-
+search(s[0])
 
 #finally closes it
 
