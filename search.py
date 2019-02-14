@@ -41,7 +41,10 @@ def search(m):
     #these if statements are for getting exact links to the resultant profiles
     for i in range (len(res)):
         if n in res[i]:
-            print(res[i])
+            if "keywords" in res[i]:
+                search(m)
+            else:
+                print(res[i])
 
 for i in range(len(s)):
     z=s[i]
