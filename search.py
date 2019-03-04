@@ -14,9 +14,9 @@ driver.get('https://www.linkedin.com/uas/login')
 text_area = driver.find_element_by_id('username')
 #finding where to fill the text
 #sendig the text to be filled
-text_area.send_keys("user@gmail.com")
+text_area.send_keys("theunmountedprogrammer@gmail.com")
 text_area = driver.find_element_by_id('password')
-text_area.send_keys("pswd")
+text_area.send_keys("")
 # click submit button
 submit_button = driver.find_elements_by_xpath('//*[@id="app__container"]/main/div/form/div[3]/button')[0]
 submit_button.click()
