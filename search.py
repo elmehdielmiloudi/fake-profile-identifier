@@ -41,16 +41,10 @@ def search(m):
     #these if statements are for getting exact links to the resultant profiles
     for i in range (len(res)):
         if n in res[i]:
-            if "keywords" in res[i]:
-                #here keywords links give us acess to more links of same profiles
-                # I'm trying to collect more profiles but it's creating an infinite loop
-                search(m)
-            else:
-                print(res[i])
+          print(res[i])
 
 for i in range(len(s)):
     z=s[i]
     search(z)
 #finally closes it
 
-#this is most siple way to start and test the use of selenium
