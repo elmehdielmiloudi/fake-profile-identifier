@@ -30,7 +30,6 @@ def search(m):
     for i in range (len(res)):
         if n in res[i]:
           print(res[i])
-            
 for i in range(len(s)):
     z=s[i]
     search(z)
